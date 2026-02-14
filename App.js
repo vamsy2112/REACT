@@ -1,25 +1,25 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const heading = React.createElement(
   "div",
   { id: "container", xyz: "abc" },
   [
+    React.createElement("h1", { id: "myHeading" }, "h1 from react"),
     React.createElement(
-      "h1",
-      { id: "heading1", className: "heading1" },
-      React.createElement(
-        "h2",
-        { id: "heading2", className: "heading2" },
-        "Hello from heading 2",
-      ),
+      "h4",
+      { id: "myHeading h4" },
+      "h4 sibling of h1 from react",
     ),
   ],
   [
     React.createElement(
-      "h1",
-      { id: "heading1", className: "heading1" },
+      "div",
+      { id: "div1", className: "heading1" },
       React.createElement(
         "h2",
-        { id: "heading2", className: "heading2" },
-        "Hello from heading 2",
+        { id: "h2", className: "heading2" },
+        "Hello from second div 2",
       ),
     ),
   ],
