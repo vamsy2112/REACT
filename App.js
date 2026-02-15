@@ -25,9 +25,25 @@ const heading = React.createElement(
   ],
 );
 
-const jsxHeading = <h1>Hello from JSX</h1>;
-console.log(jsxHeading, heading);
+// JSX
+const JsxHeading = () => {
+  return (
+    <h1 id="heading" className="react-heading">
+      Hello from JSX
+    </h1>
+  );
+};
+
+const FuncComponent = () => {
+  return (
+    <div>
+      <JsxHeading />
+      <h1>React functional component practice</h1>
+    </div>
+  );
+};
+console.log(JsxHeading, heading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(<FuncComponent />);
